@@ -1,0 +1,25 @@
+server:
+  port: ${portSusToErrBatch}
+
+spring:
+  data:
+    mongodb:
+      authentication-database: ${authenticationdatabaseMongo}
+      username: ${usrMongoCifras}
+      password: ${pwMongoCifras}
+      database: ${databaseMongo}
+      port: ${portMongo}
+      host: ${hostMongo}
+  batch:
+    job:
+      enabled: false
+  application:
+    name: btpmc-sustoerr
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+logging:
+  file: ${fileLogSusToErr}
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com.demo: INFO
